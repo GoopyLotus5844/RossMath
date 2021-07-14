@@ -1,7 +1,5 @@
 import nt_helpers as nt
+import math
 
-print(nt.order(13, 2))
-print(nt.order(13, 4))
-print(nt.order(13, 8))
-print(nt.order(13, 16))
-print(nt.order(13, 3))
+for x in range(1, 10):
+    print(x, math.factorial(x - 1) % x)
