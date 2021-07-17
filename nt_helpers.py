@@ -43,3 +43,6 @@ def prime_table(n):
 
 def list_primes(n):
     return [i for i, val in enumerate(prime_table(n)) if val]
+
+def list_units(m):
+    return [i for i in range(1, m) if math.gcd(i, m) == 1]
