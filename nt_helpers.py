@@ -1,6 +1,7 @@
 import math
 
 def list_powers_of(m, a):
+    a %= m
     powers, current, k = [], a, 1
     while True:
         powers.append((k, current))
