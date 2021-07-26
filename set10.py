@@ -35,7 +35,14 @@ for x in range(1, mod):
             print(x, y, r, s, order, lcm)
 '''
 
-for m in range(2, 10):
-    for a in nt.list_units(m):
-        val = (a ** (m - 1)) % m
-        if val != 1: print(m, a, val)
+for m in range(50):
+    for x in range(1, m):
+        if math.gcd(x, m) != 1:
+            found = False
+            for y in range(1, m):
+                if x != y and (x * y) % m == 0:
+                    found = True
+                    break
+            if not found:
+                print(m, x)
+        

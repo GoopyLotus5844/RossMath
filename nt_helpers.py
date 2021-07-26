@@ -47,3 +47,24 @@ def list_primes(n):
 
 def list_units(m):
     return [i for i in range(1, m) if math.gcd(i, m) == 1]
+
+def square_roots(m, n):
+    roots = []
+    for x in range(1, m):
+        if (x ** 2) % m == n: roots.append(x)
+    return roots
+
+def mult_poly(poly1, poly2):
+    result = []
+    for x in range(len(poly1) + len(poly2) - 1): result.append(0)
+
+    for i in range(len(poly1)):
+        for j in range(len(poly2)):
+            result[i + j] += poly1[i] * poly2[j]
+    return result
+
+def list_divisors(n):
+    divisors = []
+    for x in range(1, n + 1):
+        if n % x == 0: divisors.append(x)
+    return divisors
